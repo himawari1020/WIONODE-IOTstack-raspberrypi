@@ -6,15 +6,17 @@
     <dt><strong>raspberrypi</strong></dt>
     <dd>microSDカードライタと32GBのmicroSDが必要、OSはraspberrypi-Imagerソフトを使ってください。<br><a href="https://downloads.raspberrypi.org/imager/imager_latest.exe">https://downloads.raspberrypi.org/imager/imager_latest.exe</a></dd>
     <dt><strong>WIONODE ESP8266</strong></dt>
-    <img src="https://jp.images-monotaro.com/Monotaro3/pi/full/mono89744113-180516-02.jpg">
-    <dd><a href="https://www.arduino.cc/en/software">Arduino IDE</a>を使います、センサーはPanasonic CT250Aを想定しています。WIONODEのプログラムコードは下記Githubのリンクからダウンロードしてください。<br><a href="https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi">https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi</a></dd>
-    <dt><strong></strong></dt>
-    <dd></dd>
+    <dd><img width=350 src="https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi/blob/main/src/img/003_%E8%B3%87%E6%96%99.jpg?raw=true"><br><a href="https://www.arduino.cc/en/software">Arduino IDE</a>を使います、WIONODEのプログラムコードは下記Githubのリンクからダウンロードしてください。<a href="https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi/blob/main/WIONODE_%E9%9B%BB%E5%9C%A7%E6%B8%AC%E5%AE%9A%E7%94%A8.ino">https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi/blob/main/WIONODE_%E9%9B%BB%E5%9C%A7%E6%B8%AC%E5%AE%9A%E7%94%A8.ino</a></dd>
+    <dt><strong>WIONODEシリアル変換アダプタ</strong></dt>
+    <dd>書き込みには下の画像のアダプタが必要です。取扱方法に関しては<a href="https://dev-moyashi.hatenablog.com/entry/2016/09/08/185933">もやし丸様の「Wio NodeをArduinoとして動作させる」</a>を参照してください。<br><img width=350 src="https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi/blob/main/src/img/002_%E8%B3%87%E6%96%99.jpg?raw=true"></dd>
 </dl>
 
 # 手順
 
-1. [https://learnembeddedsystems.co.uk/easy-raspberry-pi-iot-server](https://learnembeddedsystems.co.uk/easy-raspberry-pi-iot-server)でraspberrypiのセットアップを完了させてください。
-2. [https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi/blob/main/NODERED_flows_FOR_WIONODE.json](https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi/blob/main/NODERED_flows_FOR_WIONODE.json)をダウンロード、ブラウザから\<RaspberryのIPアドレス\>:1880にアクセスし、**Ctrl+i→読み込むファイルを選択**でjsonファイルをインポートしてください。
+1. [https://learnembeddedsystems.co.uk/easy-raspberry-pi-iot-server](https://learnembeddedsystems.co.uk/easy-raspberry-pi-iot-server)でraspberrypiの構築を全て完了させてください。
 
-<img src="https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi/blob/main/src/img/001_%E6%89%8B%E9%A0%86.jpg?raw=true">
+2. [プログラムをダウンロード](https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi/blob/main/WIONODE_%E9%9B%BB%E5%9C%A7%E6%B8%AC%E5%AE%9A%E7%94%A8.ino)し、６・７行目を現場のSSIDとパスを、１０行目に任意のIPアドレスを保存しArduinoIDEでWIONODEに書き込みをしてください。<br>![手順2](https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi/blob/main/src/img/004_%E6%89%8B%E9%A0%86.jpg?raw=true)
+
+3. [https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi/blob/main/NODERED_flows_FOR_WIONODE.json](https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi/blob/main/NODERED_flows_FOR_WIONODE.json)をダウンロード、ブラウザから\<RaspberryのIPアドレス\>:1880にアクセスし、**Ctrl+i→読み込むファイルを選択**でjsonファイルをインポートしてください。<br>![手順1](https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi/blob/main/src/img/001_%E6%89%8B%E9%A0%86.jpg?raw=true)
+
+4. 
