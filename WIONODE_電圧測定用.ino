@@ -9,7 +9,7 @@
   // MQTT server details
   const char* mqtt_server = "192.168.0.32";
   const int mqtt_port = 1883;
-  const char* mqtt_topic = "/home/sensors2";
+  const char* mqtt_topic = "/home/sensors";
 
   // Pin definitions
   const uint8_t PORT0A = 1;
