@@ -19,4 +19,8 @@
 
 3. [https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi/blob/main/NODERED_flows_FOR_WIONODE.json](https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi/blob/main/NODERED_flows_FOR_WIONODE.json)をダウンロード、ブラウザから\<RaspberryのIPアドレス\>:1880にアクセスし、**Ctrl+i→読み込むファイルを選択**でjsonファイルをインポートしてください。<br>![手順1](https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi/blob/main/src/img/001_%E6%89%8B%E9%A0%86.jpg?raw=true)
 
-4. 
+4.1. **「mqtt inノード」をダブルクリック→「サーバ項目」のエンピツマークをクリック→IPアドレスをRaspberrypiのプライべートIPアドレスに変更**、これを必要分行う（例では「mqtt inノード」が2個分あります）<br>![手順2](https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi/blob/main/src/img/005_%E6%89%8B%E9%A0%86.jpg?raw=true)
+
+4.2. 同様の手順で **「influxdb outノード」をダブルクリック→「Server項目」のエンピツマークをクリック→IPアドレスをRaspberrypiのプライべートIPアドレスに変更**、これを必要分行う（例では「influxdb outノード」が2個分あります）<br>![手順3](https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi/blob/main/src/img/006_%E6%89%8B%E9%A0%86.jpg?raw=true)
+
+4.3. Noderedの変更を保存するために**画面右上の「デプロイ」**を押下し反映させる。<br>![手順4](https://github.com/himawari1020/WIONODE-IOTstack-raspberrypi/blob/main/src/img/007_%E6%89%8B%E9%A0%86.jpg?raw=true)
