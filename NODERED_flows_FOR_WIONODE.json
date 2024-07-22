@@ -1,0 +1,194 @@
+[
+    {
+        "id": "880dd321d57fad9c",
+        "type": "tab",
+        "label": "フロー 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a1b2c3d4",
+        "type": "mqtt in",
+        "z": "880dd321d57fad9c",
+        "name": "MQTT Input",
+        "topic": "/home/sensors",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 550,
+        "y": 260,
+        "wires": [
+            [
+                "e5f6g7h8",
+                "759302f4172763e6"
+            ]
+        ]
+    },
+    {
+        "id": "e5f6g7h8",
+        "type": "json",
+        "z": "880dd321d57fad9c",
+        "name": "Parse JSON",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 720,
+        "y": 260,
+        "wires": [
+            [
+                "i9j0k1l2"
+            ]
+        ]
+    },
+    {
+        "id": "i9j0k1l2",
+        "type": "influxdb out",
+        "z": "880dd321d57fad9c",
+        "influxdb": "4bf9d03af2ab2bd9",
+        "name": "InfluxDB",
+        "measurement": "sensor_data",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "sensor_data",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "",
+        "bucket": "",
+        "x": 890,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "759302f4172763e6",
+        "type": "debug",
+        "z": "880dd321d57fad9c",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "d2d497b1d43116af",
+        "type": "mqtt in",
+        "z": "880dd321d57fad9c",
+        "name": "MQTT Input",
+        "topic": "/home/sensors",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 550,
+        "y": 420,
+        "wires": [
+            [
+                "6226ba8a8d754d09",
+                "5397e1aca1239fba"
+            ]
+        ]
+    },
+    {
+        "id": "6226ba8a8d754d09",
+        "type": "json",
+        "z": "880dd321d57fad9c",
+        "name": "Parse JSON",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 720,
+        "y": 420,
+        "wires": [
+            [
+                "c624c92c01d0db69"
+            ]
+        ]
+    },
+    {
+        "id": "c624c92c01d0db69",
+        "type": "influxdb out",
+        "z": "880dd321d57fad9c",
+        "influxdb": "4bf9d03af2ab2bd9",
+        "name": "InfluxDB",
+        "measurement": "sensor_data2",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "sensor_data",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "",
+        "bucket": "",
+        "x": 890,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "5397e1aca1239fba",
+        "type": "debug",
+        "z": "880dd321d57fad9c",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "mqtt_broker",
+        "type": "mqtt-broker",
+        "name": "Local MQTT Broker",
+        "broker": "192.168.0.32",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "4bf9d03af2ab2bd9",
+        "type": "influxdb",
+        "hostname": "192.168.0.32",
+        "port": "8086",
+        "protocol": "http",
+        "database": "sensor_data",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "timeout": "10",
+        "rejectUnauthorized": true
+    }
+]
