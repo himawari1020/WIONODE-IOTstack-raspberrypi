@@ -3,8 +3,8 @@
   #include <Wire.h>
 
   // WiFi credentials
-  const char* ssid = "ctc-g-86df8f";
-  const char* password = "50793f0041a3b";
+  const char* ssid = "YOUR-SSID";
+  const char* password = "SSID-PASSWD";
 
   // MQTT server details
   const char* mqtt_server = "192.168.0.32";
